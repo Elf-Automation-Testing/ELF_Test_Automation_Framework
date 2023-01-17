@@ -1,5 +1,7 @@
 package org.automation.base;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.automation.element_repository.Home_Page;
@@ -7,10 +9,14 @@ import org.automation.element_repository.Login_Page;
 import org.automation.generic_utilities.FrameworkConstants;
 import org.automation.generic_utilities.InitObjects;
 import org.automation.generic_utilities.ReadTestData;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -99,9 +105,10 @@ public class Base_Test extends InitObjects implements FrameworkConstants {
 
 	/**
 	 * this function performs logout action
+	 * @throws IOException 
 	 */
 	@AfterMethod(alwaysRun = true)
-	public void logoutOfApplication() {
+	public void logoutOfApplication() throws IOException {
 		homePage.logout();
 	}
 

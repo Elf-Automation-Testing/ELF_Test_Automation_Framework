@@ -41,7 +41,7 @@ public class ReadTestData implements FrameworkConstants {
 	 * @throws CheckExecutionRowException
 	 * @throws InvalidExecutionColumnException
 	 */
-	public String[][] readTestDataFromExcel(String sheetName, String testCaseName, int executionColNum)
+	public String[][] readTestDataFromExcel(String sheetName, String testCaseName)
 			throws InvalidTestCaseIdException, CheckExecutionRowException, InvalidExecutionColumnException {
 
 		FileInputStream fis;
@@ -60,13 +60,14 @@ public class ReadTestData implements FrameworkConstants {
 		totalRowsOfData = getTotalNoOfTestData();
 		getStartRowNo();
 		getLastRowNo();
+		int executionColNum = getExecutionColumnNumber();
 		int totalcolData = getColumCount() - 2;
 		getNumOfIterationRows(executionColNum);
 
 		int row = 0;
 		String[][] sarr = new String[iterationRow][totalcolData];
 		for (int i = 0, k = firstRowNum; i <= (lastRowNum-firstRowNum); i++, k++) {
-			if (dataSheet.getRow(k).getCell(10).toString().equalsIgnoreCase("Yes")) {
+			if (dataSheet.getRow(k).getCell(executionColNum-1).toString().equalsIgnoreCase("Yes")) {
 				for (int j = 0, l = 1; j < totalcolData; j++, l++) {
 					sarr[row][j] = dataSheet.getRow(k).getCell(l).toString();
 				}
@@ -108,6 +109,9 @@ public class ReadTestData implements FrameworkConstants {
 			return firstRowNum;
 	}
 
+	private int getExecutionColumnNumber() {
+		return dataSheet.getRow(firstRowNum).getPhysicalNumberOfCells();
+	}
 	/***
 	 * method to capture the last row number of the test data for given test case id
 	 * 

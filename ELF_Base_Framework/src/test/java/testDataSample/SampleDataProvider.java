@@ -20,7 +20,7 @@ public class SampleDataProvider {
 	@DataProvider
 	public String[][] multipleNewUsersData() throws InvalidTestCaseIdException, CheckExecutionRowException, InvalidExecutionColumnException{
 		readData = new ReadTestData();
-		String[][] registerationData = readData.readTestDataFromExcel("Sheet1", "TC_Register_001", 11);
+		String[][] registerationData = readData.readTestDataFromExcel("Sheet1", "TC_Register_002");
 		return registerationData;
 	}
 	
