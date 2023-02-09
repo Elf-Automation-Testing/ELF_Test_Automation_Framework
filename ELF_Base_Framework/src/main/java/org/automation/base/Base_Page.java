@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
  * @author Sumanth
  * 
  */
-public class Base_Page {
+public abstract class Base_Page {
 
 	public WebDriver driver;
 	public Base_Page(WebDriver driver) {
