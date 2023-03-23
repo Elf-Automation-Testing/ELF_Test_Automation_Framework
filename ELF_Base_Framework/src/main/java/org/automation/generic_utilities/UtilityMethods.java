@@ -86,7 +86,6 @@ public class UtilityMethods implements FrameworkConstants {
 	public void selectDropDown(WebElement listbox, String option) {
 		Select select = new Select(listbox);
 		int counter = 0;
-
 		try {
 			int index = Integer.parseInt(option);
 			select.selectByIndex(index);
@@ -94,7 +93,6 @@ public class UtilityMethods implements FrameworkConstants {
 		} catch (Exception e) {
 			System.out.println("It is not a index");
 		}
-
 		if (counter == 0) {
 			try {
 				select.selectByVisibleText(option);
@@ -119,9 +117,10 @@ public class UtilityMethods implements FrameworkConstants {
 			driver.switchTo().frame(indexNameOrId);
 		}
 	}
-	
+
 	/**
 	 * This method will generate a random number within the boundary which is passed
+	 * 
 	 * @param boundary upper limit of your random number
 	 * @return
 	 */
@@ -129,9 +128,10 @@ public class UtilityMethods implements FrameworkConstants {
 		Random random = new Random();
 		return random.nextInt(boundary);
 	}
-	
+
 	/**
 	 * This method will give the system date
+	 * 
 	 * @return
 	 */
 	public Date giveSystemDate() {

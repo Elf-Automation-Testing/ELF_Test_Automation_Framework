@@ -44,7 +44,7 @@ public class Login_Page extends Base_Page {
 	
 	//================Business Logic or Action methods or Behavior================
 	public Home_Page login(String username, String password) {
-		getLoginLink().click();
+		getLoginButton().click();
 		emailTextField.sendKeys(username);
 		passwordTextField.sendKeys(password);
 		loginButton.click();
