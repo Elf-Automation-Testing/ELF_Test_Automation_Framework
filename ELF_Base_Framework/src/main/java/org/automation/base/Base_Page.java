@@ -13,13 +13,15 @@ import org.openqa.selenium.support.PageFactory;
  * @author Sumanth
  * 
  */
-public abstract class Base_Page {
+public  class Base_Page {
 
 	public WebDriver driver;
 	public Base_Page(WebDriver driver) {
+		
 		PageFactory.initElements(driver, this);
 		this.driver=driver;
 	}
+	
 	
 	//================Web elements or Property================
 	@FindBy(linkText = "Calendar")
@@ -56,6 +58,7 @@ public abstract class Base_Page {
 	private WebElement quickCreateDropDown;
 	
 	
+
 	public WebDriver getDriver() {
 		return driver;
 	}

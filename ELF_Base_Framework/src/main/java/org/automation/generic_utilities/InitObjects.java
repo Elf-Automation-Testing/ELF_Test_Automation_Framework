@@ -1,5 +1,6 @@
  package org.automation.generic_utilities;
 
+import org.automation.base.Base_Page;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -9,6 +10,16 @@ import org.openqa.selenium.WebDriver;
  */
 public class InitObjects {
 
+//	public WebDriver driver;
+//	public InitObjects(WebDriver driver) {
+//		this.driver=driver;
+		//super(driver);
+		// TODO Auto-generated constructor stub
+//	}     
+	
+	public WebDriver driver;
+
+	
 	public ActionsUtil getActionsUtil(WebDriver driver) {
 		return new ActionsUtil(driver);
 	}
@@ -24,4 +35,6 @@ public class InitObjects {
 	public UtilityMethods getUtilityMethods() {
 		return new UtilityMethods();
 	}
+
+	
 }

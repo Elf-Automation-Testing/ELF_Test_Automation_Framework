@@ -34,6 +34,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 public abstract class Base_Test extends InitObjects implements FrameworkConstants {
 
+	
+
+
 	public static WebDriver driver;
 	public ReadTestData readData;
 	public WebDriverWait explicitWait;
@@ -43,6 +46,12 @@ public abstract class Base_Test extends InitObjects implements FrameworkConstant
 	public String url;
 	public String username;
 	public String password;
+
+/*	public Base_Test(WebDriver driver) {
+		
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}   
 
 	/**
 	 * This function performs the browser setup *
