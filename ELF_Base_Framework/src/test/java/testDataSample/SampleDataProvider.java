@@ -36,7 +36,7 @@ public class SampleDataProvider {
 		WebDriver driver = new ChromeDriver();
 		driver.get(readData.readDataFromPropertyFile("url"));
 		Login_Page loginPage = new Login_Page(driver);
-		loginPage.getRegisterLink().click();
+		//loginPage.getRegisterLink().click();
 		Register_Page registerPage = new Register_Page(driver);
 		registerPage.registerUser(gender, firstName, lastName, emailId, password);
 		driver.quit();

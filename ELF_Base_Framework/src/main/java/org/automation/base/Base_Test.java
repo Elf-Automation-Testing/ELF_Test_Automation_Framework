@@ -41,7 +41,7 @@ public abstract class Base_Test extends InitObjects implements FrameworkConstant
 	public Login_Page loginPage;
 	public Home_Page homePage;
 	public String url;
-	public String emailId;
+	public String username;
 	public String password;
 
 	/**
@@ -90,12 +90,12 @@ public abstract class Base_Test extends InitObjects implements FrameworkConstant
 	public void loginToApplication() {
 		
 		url = readData.readDataFromPropertyFile("url");
-		emailId = readData.readDataFromPropertyFile("emailId");
+		username = readData.readDataFromPropertyFile("username");
 		password = readData.readDataFromPropertyFile("password");
 
 		driver.get(url);
 		loginPage = new Login_Page(driver);
-		homePage = loginPage.login(emailId, password);
+		homePage = loginPage.login(username, password);
 	}
 
 	/**

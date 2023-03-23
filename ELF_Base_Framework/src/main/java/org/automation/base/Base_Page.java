@@ -22,103 +22,87 @@ public abstract class Base_Page {
 	}
 	
 	//================Web elements or Property================
-	@FindBy(linkText="Log in") 
-	private WebElement loginLink;
+	@FindBy(linkText = "Calendar")
+	private WebElement calendar;
 	
-	@FindBy(linkText="Register") 
-	private WebElement registerLink;
+	@FindBy(linkText = "Leads")
+	private WebElement leads;
 	
-	@FindBy(linkText="Shopping cart") 
-	private WebElement shoppingCartLink;
+	@FindBy(linkText = "Organizations")
+	private WebElement organizations;
 	
-	@FindBy(linkText="Wishlist") 
-	private WebElement wishListLink;
+	@FindBy(linkText = "Contacts")
+	private WebElement contacts;
 	
-	@FindBy(partialLinkText="BOOKS") 
-	private WebElement booksModule;
+	@FindBy(linkText = "Opportunities")
+	private WebElement opportunities;
 	
-	@FindBy(partialLinkText="COMPUTERS") 
-	private WebElement computersModule;
+	@FindBy(linkText = "Products")
+	private WebElement products;
 	
-	@FindBy(partialLinkText="ELECTRONICS") 
-	private WebElement electronicsModule;
+	@FindBy(linkText = "Documents")
+	private WebElement documents;
 	
-	@FindBy(partialLinkText="APPARELS") 
-	private WebElement apparelsAndShoesModule;
+	@FindBy(linkText = "Trouble Tickets")
+	private WebElement troubleTickets;
 	
-	@FindBy(partialLinkText="DIGITAL DOWNLOADS") 
-	private WebElement digitalDownloadsModule;
+	@FindBy(linkText = "Dashboard")
+	private WebElement dashboard;
 	
-	@FindBy(partialLinkText="JEWELLERY") 
-	private WebElement jewelleryModule;
+	@FindBy(linkText = "More")
+	private WebElement more;
 	
-	@FindBy(partialLinkText="GIFT CARDS") 
-	private WebElement giftCardsModule;
+	@FindBy(id = "qccombo")
+	private WebElement quickCreateDropDown;
 	
-	@FindBy(id="small-searchterms")
-	private WebElement searchStoreTextBox;
 	
-	@FindBy(xpath="//*[@value='Search']")
-	private WebElement searchButton;
-	
-	@FindBy(xpath="//img[@alt='Tricentis Demo Web Shop']")
-	private WebElement demoWebShopLogo;
-	
-	//================Getters or Public services================
-	public WebElement getLoginLink() {
-		return loginLink;
+	public WebDriver getDriver() {
+		return driver;
 	}
 
-	public WebElement getRegisterLink() {
-		return registerLink;
+	public WebElement getCalendar() {
+		return calendar;
 	}
 
-	public WebElement getShoppingCartLink() {
-		return shoppingCartLink;
+	public WebElement getLeads() {
+		return leads;
 	}
 
-	public WebElement getWishListLink() {
-		return wishListLink;
+	public WebElement getOrganizations() {
+		return organizations;
 	}
 
-	public WebElement getBooksModule() {
-		return booksModule;
+	public WebElement getContacts() {
+		return contacts;
 	}
 
-	public WebElement getComputersModule() {
-		return computersModule;
+	public WebElement getOpportunities() {
+		return opportunities;
 	}
 
-	public WebElement getElectronicsModule() {
-		return electronicsModule;
+	public WebElement getProducts() {
+		return products;
 	}
 
-	public WebElement getApparelsAndShoesModule() {
-		return apparelsAndShoesModule;
+	public WebElement getDocuments() {
+		return documents;
 	}
 
-	public WebElement getDigitalDownloadsModule() {
-		return digitalDownloadsModule;
+	public WebElement getTroubleTickets() {
+		return troubleTickets;
 	}
 
-	public WebElement getJewelleryModule() {
-		return jewelleryModule;
+	public WebElement getDashboard() {
+		return dashboard;
 	}
 
-	public WebElement getGiftCardsModule() {
-		return giftCardsModule;
+	public WebElement getMore() {
+		return more;
 	}
 
-	public WebElement getSearchStoreTextBox() {
-		return searchStoreTextBox;
+	public WebElement getQuickCreateDropDown() {
+		return quickCreateDropDown;
 	}
 
-	public WebElement getSearchButton() {
-		return searchButton;
-	}
-
-	public WebElement getDemoWebShopLogo() {
-		return demoWebShopLogo;
-	}
-		
+	
 }
