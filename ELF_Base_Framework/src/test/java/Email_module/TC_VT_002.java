@@ -11,12 +11,12 @@ import org.testng.annotations.Test;
 public class TC_VT_002 extends Base_Test {
 	@Test
 	public void Qualified_mail() {
-		//String excepted_result=" Administrator - Email - vtiger CRM 5 - Commercial Open Source CRM";
+		String excepted_result="Administrator - Email - vtiger CRM 5 - Commercial Open Source CRM";
 		Email_page mail=new Email_page(driver);
 		
 		mail.getEmailButton().click();
-//		Assert.assertEquals(driver.getTitle(), excepted_result);
-//		Reporter.log(excepted_result);
+		Assert.assertEquals(driver.getTitle(), excepted_result);
+		Reporter.log("Email page is displayed",true);
 	    
 		
 		
