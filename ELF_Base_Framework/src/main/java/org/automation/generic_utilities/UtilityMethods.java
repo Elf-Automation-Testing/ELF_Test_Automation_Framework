@@ -76,7 +76,6 @@ public class UtilityMethods implements FrameworkConstants {
 			e.printStackTrace();
 		}
 	}
-
 	/***
 	 * This method will select drop down based on index, value and visible text
 	 * 
@@ -101,7 +100,6 @@ public class UtilityMethods implements FrameworkConstants {
 			}
 		}
 	}
-
 	/**
 	 * This method helps to switch the control to a particular frame based on
 	 * index/name/id

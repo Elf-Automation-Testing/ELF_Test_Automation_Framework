@@ -3,7 +3,24 @@ package org.automation.base;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.automation.element_repository.Home_Page;
+import org.automation.element_repository.Login_Page;
+import org.automation.element_repository.TroubleTickets_Page;
+import org.automation.generic_utilities.ActionsUtil;
+import org.automation.generic_utilities.FrameworkConstants;
+import org.automation.generic_utilities.InitObjects;
+import org.automation.generic_utilities.ReadTestData;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import org.automation.element_repository.Login_Page;
 import org.automation.generic_utilities.FrameworkConstants;
 import org.automation.generic_utilities.InitObjects;
@@ -33,19 +50,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  *
  */
 public abstract class Base_Test extends InitObjects implements FrameworkConstants {
+	
 
 	public static WebDriver driver;
 	public ReadTestData readData;
 	public WebDriverWait explicitWait;
 	public InitObjects initClass;
-	public Login_Page loginPage;
-	public Home_Page homePage;
 	public String url;
-	public String emailId;
+	public String username;
 	public String password;
+	public Login_Page loginPage;
 
 	/**
-	 * This function performs the browser setup *
+	  This function performs the browser setup 
 	 * 
 	 * @param browserName this method receives the parameter from xml file and based
 	 *                    on the value passed it will launch the respective browser,
@@ -90,12 +107,12 @@ public abstract class Base_Test extends InitObjects implements FrameworkConstant
 	public void loginToApplication() {
 		
 		url = readData.readDataFromPropertyFile("url");
-		emailId = readData.readDataFromPropertyFile("emailId");
+		username = readData.readDataFromPropertyFile("username");
 		password = readData.readDataFromPropertyFile("password");
 
 		driver.get(url);
-		loginPage = new Login_Page(driver);
-		homePage = loginPage.login(emailId, password);
+		loginPage=new Login_Page(driver);
+		loginPage.login(username, password);
 	}
 
 	/**
@@ -104,7 +121,9 @@ public abstract class Base_Test extends InitObjects implements FrameworkConstant
 	 */
 	@AfterMethod(alwaysRun = true)
 	public void logoutOfApplication() throws IOException {
-		homePage.logout();
+		ActionsUtil actions = initClass.getActionsUtil(driver);
+		actions.mouseHoverOnElement(loginPage.getAdministratorIcon());
+		actions.clickOnElement(loginPage.getSignOutLink());
 	}
 
 	/**

@@ -7,13 +7,19 @@
     <line>
       <![CDATA[Browser window is maximized successfully]]>
     </line>
+    <line>
+      <![CDATA[Trouble Ticket Page is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Creating New Ticket page is displayed]]>
+    </line>
   </reporter-output>
-  <suite started-at="2023-03-17T11:26:17 IST" name="Default suite" finished-at="2023-03-17T11:26:39 IST" duration-ms="21118">
+  <suite started-at="2023-03-23T17:16:45 IST" name="Default suite" finished-at="2023-03-23T17:16:55 IST" duration-ms="9976">
     <groups>
     </groups>
-    <test started-at="2023-03-17T11:26:17 IST" name="Default test" finished-at="2023-03-17T11:26:39 IST" duration-ms="21118">
-      <class name="testCaseSample.TC_SampleTestCase_Test">
-        <test-method is-config="true" signature="browserSetUp(java.lang.String)[pri:0, instance:testCaseSample.TC_SampleTestCase_Test@be64738]" started-at="2023-03-17T11:26:17 IST" name="browserSetUp" finished-at="2023-03-17T11:26:29 IST" duration-ms="11981" status="PASS">
+    <test started-at="2023-03-23T17:16:45 IST" name="Default test" finished-at="2023-03-23T17:16:55 IST" duration-ms="9976">
+      <class name="troubleTickets.TC_VT_002_Test">
+        <test-method is-config="true" signature="browserSetUp(java.lang.String)[pri:0, instance:troubleTickets.TC_VT_002_Test@be64738]" started-at="2023-03-23T17:16:45 IST" name="browserSetUp" finished-at="2023-03-23T17:16:47 IST" duration-ms="2262" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,23 +36,29 @@
             </line>
           </reporter-output>
         </test-method> <!-- browserSetUp -->
-        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testCaseSample.TC_SampleTestCase_Test@be64738]" started-at="2023-03-17T11:26:29 IST" name="loginToApplication" finished-at="2023-03-17T11:26:35 IST" duration-ms="5714" status="PASS">
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:troubleTickets.TC_VT_002_Test@be64738]" started-at="2023-03-23T17:16:47 IST" name="loginToApplication" finished-at="2023-03-23T17:16:50 IST" duration-ms="2683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToApplication -->
-        <test-method signature="sample()[pri:0, instance:testCaseSample.TC_SampleTestCase_Test@be64738]" started-at="2023-03-17T11:26:35 IST" name="sample" finished-at="2023-03-17T11:26:36 IST" duration-ms="951" status="PASS">
+        <test-method signature="toOpenNewTicketPage()[pri:0, instance:troubleTickets.TC_VT_002_Test@be64738]" started-at="2023-03-23T17:16:50 IST" name="toOpenNewTicketPage" finished-at="2023-03-23T17:16:53 IST" duration-ms="3514" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Trouble Ticket Page is displayed]]>
+            </line>
+            <line>
+              <![CDATA[Creating New Ticket page is displayed]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- sample -->
-        <test-method is-config="true" signature="logoutOfApplication()[pri:0, instance:testCaseSample.TC_SampleTestCase_Test@be64738]" started-at="2023-03-17T11:26:36 IST" name="logoutOfApplication" finished-at="2023-03-17T11:26:37 IST" duration-ms="1160" status="PASS">
+        </test-method> <!-- toOpenNewTicketPage -->
+        <test-method is-config="true" signature="logoutOfApplication()[pri:0, instance:troubleTickets.TC_VT_002_Test@be64738]" started-at="2023-03-23T17:16:53 IST" name="logoutOfApplication" finished-at="2023-03-23T17:16:54 IST" duration-ms="1037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutOfApplication -->
-        <test-method is-config="true" signature="browserTearDown()[pri:0, instance:testCaseSample.TC_SampleTestCase_Test@be64738]" started-at="2023-03-17T11:26:37 IST" name="browserTearDown" finished-at="2023-03-17T11:26:39 IST" duration-ms="1245" status="PASS">
+        <test-method is-config="true" signature="browserTearDown()[pri:0, instance:troubleTickets.TC_VT_002_Test@be64738]" started-at="2023-03-23T17:16:54 IST" name="browserTearDown" finished-at="2023-03-23T17:16:55 IST" duration-ms="432" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserTearDown -->
-      </class> <!-- testCaseSample.TC_SampleTestCase_Test -->
+      </class> <!-- troubleTickets.TC_VT_002_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -9,19 +9,18 @@ import org.openqa.selenium.support.PageFactory;
 /***
  * 
  * Every Page class must and should extend Base Page
- * In this page you will find all common elements of the Web App
+ * In this page you will find all common elements of the vtiger App
  * 
- * @author Sumanth
+ * @author Abhijith S
  * 
  */
 public abstract class Base_Page {
-
 	public WebDriver driver;
+	
 	public Base_Page(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver=driver;
 	}
-	
 	@FindBy(linkText = "Calendar")
 	private WebElement calenderLink;
 
@@ -374,8 +373,5 @@ public abstract class Base_Page {
 	private WebElement feedbackLink;
 	
 	@FindBy(linkText = "CRM Settings")
-	private WebElement CRMSettingsLink;
-	
-	
-	
+	private WebElement CRMSettingsLink;	
 }
