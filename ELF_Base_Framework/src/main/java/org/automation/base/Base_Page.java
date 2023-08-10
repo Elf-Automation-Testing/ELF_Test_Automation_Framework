@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
  * Every Page class must and should extend Base Page
  * In this page you will find all common elements of the vtiger App
  * 
- * @author Abhijith S
+ * @author Sumanth Chinivar
  * 
  */
 public abstract class Base_Page {
