@@ -11,8 +11,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class SampleDataProvider {
 
 	public ReadTestData readData;
@@ -32,7 +30,6 @@ public class SampleDataProvider {
 		String emailId = registrationData[3];
 		String password = registrationData[4];
 		
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get(readData.readDataFromPropertyFile("url"));
 		Login_Page loginPage = new Login_Page(driver);

@@ -1,14 +1,13 @@
 package org.automation.base;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-import org.automation.element_repository.Home_Page;
 import org.automation.element_repository.Login_Page;
 import org.automation.generic_utilities.FrameworkConstants;
 import org.automation.generic_utilities.InitObjects;
 import org.automation.generic_utilities.ReadTestData;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,8 +18,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 /***
  * 
@@ -33,16 +30,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  *
  */
 public abstract class Base_Test extends InitObjects implements FrameworkConstants {
-
-	public static WebDriver driver;
-	public ReadTestData readData;
-	public WebDriverWait explicitWait;
-	public InitObjects initClass;
-	public Login_Page loginPage;
-	public Home_Page homePage;
-	public String url;
-	public String emailId;
-	public String password;
 
 	/**
 	 * This function performs the browser setup *
@@ -68,18 +55,16 @@ public abstract class Base_Test extends InitObjects implements FrameworkConstant
 			}
 		} 
 		if (browserName.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			Reporter.log("Successfully Launched Chrome Browser", true);
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+				driver = new FirefoxDriver();
 			Reporter.log("Successfully Launched Firefox Browser", true);
 		}
 		driver.manage().window().maximize();
 		Reporter.log("Browser window is maximized successfully", true);
-		driver.manage().timeouts().implicitlyWait(IMPLICIT_TIMEOUT, TimeUnit.SECONDS);
-		explicitWait = new WebDriverWait(driver, EXPLICIT_TIMEOUT);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_TIMEOUT));
+		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_TIMEOUT));
 		initClass = new InitObjects();
 	}
 
