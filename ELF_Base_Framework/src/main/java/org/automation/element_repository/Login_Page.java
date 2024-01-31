@@ -12,11 +12,8 @@ import org.openqa.selenium.support.FindBy;
  */
 public class Login_Page extends Base_Page {
 	
-	public WebDriver driver;
-	
 	public Login_Page(WebDriver driver) {
 		super(driver);
-		this.driver = driver;
 	}
 	
 	//================Web elements or Property================
@@ -50,6 +47,6 @@ public class Login_Page extends Base_Page {
 		loginButton.click();
 		
 		//landing Page Object
-		return new Home_Page(driver);
+		return new Home_Page(super.driver);
 	}
 }

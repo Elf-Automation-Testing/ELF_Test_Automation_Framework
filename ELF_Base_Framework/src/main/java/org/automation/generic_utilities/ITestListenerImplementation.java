@@ -28,7 +28,7 @@ public class ITestListenerImplementation extends Base_Test implements ITestListe
 	}
 
 	public void onTestFailure(ITestResult result) {	
-		initClass.getUtilityMethods().captureScreen(Base_Test.driver, result);  		
+		initClass.getUtilityMethods().captureScreen(Base_Test.static_driver_ref, result);  		
 	}		
 
 	public void onTestSkipped(ITestResult result) {					

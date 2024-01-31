@@ -2,10 +2,8 @@ package org.automation.base;
 
 import java.io.IOException;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import org.automation.element_repository.Login_Page;
-import org.automation.generic_utilities.FrameworkConstants;
 import org.automation.generic_utilities.InitObjects;
 import org.automation.generic_utilities.ReadTestData;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,7 +27,7 @@ import org.testng.annotations.Parameters;
  * @author <a href="mailto:sumanth[dot]l[at]testyanta[dot]com">sumanth.l@testyantra.com</a>
  *
  */
-public abstract class Base_Test extends InitObjects implements FrameworkConstants {
+public abstract class Base_Test extends InitObjects {
 
 	/**
 	 * This function performs the browser setup *

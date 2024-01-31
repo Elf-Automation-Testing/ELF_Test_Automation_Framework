@@ -10,9 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * @author Sumanth
  *
  */
-public class InitObjects {
+public class InitObjects implements FrameworkConstants {
 
-	public static WebDriver driver;
+	public static WebDriver static_driver_ref;
+	public WebDriver driver;
 	public ReadTestData readData;
 	public WebDriverWait explicitWait;
 	public InitObjects initClass;

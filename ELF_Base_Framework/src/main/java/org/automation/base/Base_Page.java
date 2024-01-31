@@ -1,5 +1,6 @@
 package org.automation.base;
 
+import org.automation.generic_utilities.InitObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,12 +14,10 @@ import org.openqa.selenium.support.PageFactory;
  * @author Sumanth
  * 
  */
-public abstract class Base_Page {
+public abstract class Base_Page extends InitObjects {
 
-	public WebDriver driver;
 	public Base_Page(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		this.driver=driver;
 	}
 	
 	//================Web elements or Property================
