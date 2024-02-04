@@ -44,7 +44,8 @@ public abstract class Base_Test extends InitObjects {
 	@Parameters("browser")
 	@BeforeClass(alwaysRun = true)
 	public void browserSetUp(@Optional("noValue") String browserName) throws InvalidBrowserValueException {
-		readData = new ReadTestData();
+		initClass = new InitObjects();
+		readData = initClass.getReadTestData();
 		if (browserName.equalsIgnoreCase("noValue")) {
 			browserName = readData.readDataFromPropertyFile("browser");
 			if (browserName.equalsIgnoreCase("null")) {
@@ -63,7 +64,7 @@ public abstract class Base_Test extends InitObjects {
 		Reporter.log("Browser window is maximized successfully", true);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_TIMEOUT));
 		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_TIMEOUT));
-		initClass = new InitObjects();
+		
 	}
 
 	/**

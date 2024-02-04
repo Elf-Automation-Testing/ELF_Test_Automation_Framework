@@ -6,17 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * 
+ * This is a Singleton Class
  * @author Sumanth
  *
  */
 public class InitObjects implements FrameworkConstants {
-
+	
 	public static WebDriver static_driver_ref;
 	public WebDriver driver;
+	public InitObjects initClass; 
 	public ReadTestData readData;
 	public WebDriverWait explicitWait;
-	public InitObjects initClass;
 	public Login_Page loginPage;
 	public Home_Page homePage;
 	public String url;
