@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * This is a Singleton Class
+ * 
  * @author Sumanth
  *
  */
